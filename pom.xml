@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.acgs</groupId>
+    <artifactId>acgs-cms</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>acgs-cms</name>
+    <url>https://github.com/acgs-org/acgs-cms-core</url>
+    <description>acgs CMS implemented by java</description>
+
+    <modules>
+        <module>acgs-core</module>
+        <module>acgs-cms-spring-boot-autoconfigure</module>
+        <module>acgs-cms-spring-boot-starter</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+
+    <organization>
+        <name>acgs-org</name>
+        <url>https://github.com/acgs-org</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>John</id>
+            <name>Tierney John</name>
+            <url>https://github.com/Tierney-John/</url>
+            <email>tierney-john@hotmail.com</email>
+        </developer>
+    </developers>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-source</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadoc</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
