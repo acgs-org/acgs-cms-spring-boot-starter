@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=org.acgs.autoconfigure.configuration.AcgsCmsConfiguration
