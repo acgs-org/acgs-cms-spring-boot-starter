@@ -11,8 +11,8 @@ import org.slf4j.LoggerFactory;
 import java.util.Map;
 
 /**
- * @Author John@acgs-org
- * @Date 2021/4/26
+ * @author John@acgs-org
+ * create time is 2021/4/26
  */
 public class DoubleJWTTest extends TestCase {
 
@@ -32,7 +32,7 @@ public class DoubleJWTTest extends TestCase {
         log.info(token);
     }
 
-    public void testDecodeAccessToken() throws InterruptedException {
+    public void testDecodeAccessToken() {
         DoubleJWT jwt = new DoubleJWT("secret", 10000, 20000);
         String token = jwt.generateAccessToken(1);
         assertNotNull(token);

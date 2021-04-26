@@ -9,8 +9,8 @@ import org.springframework.core.annotation.Order;
 /**
  * acgs cms 配置文件
  *
- * @Author John@acgs-org
- * @Date 2021/4/26
+ * @author John@acgs-org
+ * create time 2021/4/26
  */
 @Configuration(proxyBeanMethods = false)
 @Order(Ordered.HIGHEST_PRECEDENCE)
@@ -20,9 +20,9 @@ public class AcgsCmsConfiguration {
     @Autowired
     private AcgsCmsProperties properties;
 
-    /**
-     * @return jwt bean
-     */
+//    /**
+//     * @return jwt bean
+//     */
 //    @Bean
 //    public DoubleJWT jwt() {
 //        String secret = properties.getTokenSecret();

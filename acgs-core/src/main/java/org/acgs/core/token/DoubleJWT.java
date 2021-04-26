@@ -18,8 +18,8 @@ import java.util.Objects;
 /**
  * 双令牌验证模式
  *
- * @Author John@acgs-org
- * @Date 2021/4/26
+ * @author John@acgs-org
+ * create time is 2021/4/26
  */
 public class DoubleJWT {
 
@@ -83,7 +83,6 @@ public class DoubleJWT {
      * @param identity  身份
      * @param scope     范围
      * @param expire    过期时间，单位 s
-     * @return
      */
     public String generateToken(String tokenType, long identity, String scope, long expire) {
         Date expireDate = DateUtil.getDurationDate(expire);
