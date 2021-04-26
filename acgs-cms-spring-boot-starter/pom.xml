@@ -5,15 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.4</version>
+        <groupId>org.acgs</groupId>
+        <artifactId>acgs-cms</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.acgs</groupId>
     <artifactId>acgs-cms-spring-boot-starter</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+
+    <name>acgs-cms-spring-boot-starter</name>
+    <url>https://github.com/acgs-org/acgs-cms-core</url>
+    <description>starter project for acgs cms</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
