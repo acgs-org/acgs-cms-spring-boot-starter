@@ -29,6 +29,7 @@
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
         <maven.deploy.skip>true</maven.deploy.skip>
+        <acgs.version>0.1.0</acgs.version>
     </properties>
 
     <organization>
