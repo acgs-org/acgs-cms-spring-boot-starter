@@ -1,0 +1,9 @@
+package {packagePath}.{name};
+
+import lombok.Data;
+
+@Data
+public class {upName} {
+
+{entityItem}
+}

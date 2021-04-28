@@ -20,6 +20,6 @@ public @interface AcgsBuild {
     @AliasFor(annotation = RestController.class)
     String value() default "";
 
-    @AliasFor(annotation = RequestMapping.class, attribute = "path", value = "/acgs")
-    String[] path() default {};
+    @AliasFor(annotation = RequestMapping.class, attribute = "path")
+    String[] path() default {"/acgs"};
 }

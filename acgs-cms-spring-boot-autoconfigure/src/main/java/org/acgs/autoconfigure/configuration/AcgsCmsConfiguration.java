@@ -1,12 +1,16 @@
 package org.acgs.autoconfigure.configuration;
 
+import org.acgs.autoconfigure.bean.Templates;
+import org.acgs.autoconfigure.util.TemplateUtil;
 import org.acgs.core.token.DoubleJWT;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * acgs cms 配置文件
@@ -16,11 +20,14 @@ import org.springframework.core.annotation.Order;
  */
 @Configuration(proxyBeanMethods = false)
 @Order(Ordered.HIGHEST_PRECEDENCE)
-@EnableConfigurationProperties(AcgsCmsProperties.class)
+@EnableConfigurationProperties({AcgsCmsProperties.class, AcgsCmsBuildProperties.class})
 public class AcgsCmsConfiguration {
 
-    @Autowired
-    private AcgsCmsProperties properties;
+    private final AcgsCmsProperties properties;
+
+    public AcgsCmsConfiguration(AcgsCmsProperties properties) {
+        this.properties = properties;
+    }
 
     /**
      * @return jwt bean
@@ -39,6 +46,13 @@ public class AcgsCmsConfiguration {
             refreshExpire = 60 * 60 * 24 * 7L;
         }
         return new DoubleJWT(secret, accessExpire, refreshExpire);
+    }
+
+    @Bean
+    public Templates templates() {
+        Map<String, String> template = new HashMap<>();
+        template.put("entity", TemplateUtil.getTemplate("entity"));
+        return new Templates(template);
     }
 
 }

@@ -9,11 +9,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties("acgs.cms.build")
 public class AcgsCmsBuildProperties {
 
-    private String path;
+    private String path = "";
 
-    private String driver;
+    private String driver = "mongo";
 
-    private boolean all;
+    private boolean all = false;
 
     public String getPath() {
         return path;
