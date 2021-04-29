@@ -1,0 +1,5 @@
+    @PostMapping("/add")
+    public {upName} create{upName}(@RequestBody {upName} {name}) {
+        return {name}Repository.save({name});
+    }
+

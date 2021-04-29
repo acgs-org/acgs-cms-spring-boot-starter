@@ -1,0 +1,18 @@
+package {packagePath}.{name};
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/v1/{name}")
+public class {upName}Controller {
+
+    @Autowired
+    private {upName}Repository {name}Repository;
+
+{methodItem}
+
+}

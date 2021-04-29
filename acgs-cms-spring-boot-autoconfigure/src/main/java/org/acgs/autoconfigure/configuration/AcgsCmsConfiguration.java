@@ -52,6 +52,10 @@ public class AcgsCmsConfiguration {
     public Templates templates() {
         Map<String, String> template = new HashMap<>();
         template.put("entity", TemplateUtil.getTemplate("entity"));
+        template.put("mongo-repository", TemplateUtil.getTemplate("mongo-repository"));
+        template.put("mongo-controller", TemplateUtil.getTemplate("mongo-controller"));
+        template.put("controller-get-item", TemplateUtil.getComponent("controller-get-item"));
+        template.put("controller-post-item", TemplateUtil.getComponent("controller-post-item"));
         return new Templates(template);
     }
 

@@ -1,0 +1,15 @@
+    @GetMapping("/")
+    public Optional<{upName}> get{upName}(@RequestBody {upName} {name}) {
+        return {name}Repository.findOne(Example.of({name}));
+    }
+
+    @GetMapping("/{id}")
+    public Optional<{upName}> get{upName}(@PathVariable String id) {
+        return {name}Repository.findById(id);
+    }
+
+    @GetMapping("/all")
+    public List<{upName}> findAll() {
+        return {name}Repository.findAll();
+    }
+
