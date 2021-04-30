@@ -37,6 +37,7 @@ class TemplateBuilderTest {
         entity.setMethods(methods);
 
         TemplateBuilder builder = new TemplateBuilder("org.acgs.autoconfigure.test", "mongo", true, templates);
-        builder.build(entity);
+
+//        builder.build(entity);
     }
 }
