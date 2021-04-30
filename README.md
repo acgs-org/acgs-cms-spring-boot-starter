@@ -29,7 +29,7 @@ acgs项目是“交互式编程”思想的具体实现.意在实现一种交互
 
 1. 导入 maven 依赖
 
-```
+```html
 <dependency>
     <groupId>org.acgs</groupId>
     <artifactId>acgs-cms-spring-boot-starter</artifactId>
@@ -49,14 +49,14 @@ acgs:
 
 3. 继承接口
 
-```
+```java
 @AcgsBuild
 public class TestController extends BuilderController {}
 ```
 
 4. 测试
 
-```
+```js
 POST http://localhost:5000/acgs
 Content-Type: application/json
 
@@ -75,7 +75,7 @@ Content-Type: application/json
 ###
 ```
 
-```
+```js
 POST http://localhost:5000/v1/sku/add
 Content-Type: application/json
 
