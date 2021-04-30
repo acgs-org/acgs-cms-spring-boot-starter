@@ -4,7 +4,6 @@ import org.acgs.autoconfigure.bean.TemplateBuilder;
 import org.acgs.autoconfigure.bean.Templates;
 import org.acgs.autoconfigure.util.TemplateUtil;
 import org.acgs.core.token.DoubleJWT;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,20 +21,16 @@ import java.util.Map;
  */
 @Configuration(proxyBeanMethods = false)
 @Order(Ordered.HIGHEST_PRECEDENCE)
-@EnableConfigurationProperties({AcgsCmsProperties.class})
+@EnableConfigurationProperties({AcgsCmsProperties.class, AcgsCmsBuildProperties.class})
 public class AcgsCmsConfiguration {
 
     private final AcgsCmsProperties properties;
 
-    @Value("${acgs.build.basePath}")
-    private String basePath;
-    @Value("${acgs.build.driver:mongo}")
-    private String driverType;
-    @Value("${acgs.build.buildAll:false}")
-    private boolean buildAll;
+    private final AcgsCmsBuildProperties buildProperties;
 
-    public AcgsCmsConfiguration(AcgsCmsProperties properties) {
+    public AcgsCmsConfiguration(AcgsCmsProperties properties, AcgsCmsBuildProperties buildProperties) {
         this.properties = properties;
+        this.buildProperties = buildProperties;
     }
 
     /**
@@ -70,6 +65,9 @@ public class AcgsCmsConfiguration {
 
     @Bean
     public TemplateBuilder builder() {
+        String basePath = buildProperties.getBasePath();
+        String driverType = buildProperties.getDriverType();
+        boolean buildAll = buildProperties.isBuildAll();
         return new TemplateBuilder(basePath, driverType, buildAll, templates());
     }
 
