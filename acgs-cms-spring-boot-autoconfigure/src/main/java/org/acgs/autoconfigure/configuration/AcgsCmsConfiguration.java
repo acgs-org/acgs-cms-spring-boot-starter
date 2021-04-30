@@ -13,7 +13,6 @@ import org.springframework.core.annotation.Order;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * acgs cms 配置文件
@@ -23,21 +22,20 @@ import java.util.Objects;
  */
 @Configuration(proxyBeanMethods = false)
 @Order(Ordered.HIGHEST_PRECEDENCE)
-@EnableConfigurationProperties({AcgsCmsProperties.class, AcgsCmsBuildProperties.class})
+@EnableConfigurationProperties({AcgsCmsProperties.class})
 public class AcgsCmsConfiguration {
 
     private final AcgsCmsProperties properties;
-    private final AcgsCmsBuildProperties buildProperties;
+
     @Value("${acgs.build.basePath}")
     private String basePath;
-    @Value("${acgs.build.driver}")
+    @Value("${acgs.build.driver:mongo}")
     private String driverType;
-    @Value("${acgs.build.buildAll}")
+    @Value("${acgs.build.buildAll:false}")
     private boolean buildAll;
 
-    public AcgsCmsConfiguration(AcgsCmsProperties properties, AcgsCmsBuildProperties buildProperties) {
+    public AcgsCmsConfiguration(AcgsCmsProperties properties) {
         this.properties = properties;
-        this.buildProperties = buildProperties;
     }
 
     /**
@@ -72,14 +70,6 @@ public class AcgsCmsConfiguration {
 
     @Bean
     public TemplateBuilder builder() {
-        if (basePath == null || Objects.equals(basePath, "")) {
-            // 未赋值则采用默认值
-            basePath = buildProperties.getBasePath();
-        }
-        if (driverType == null || Objects.equals(driverType, "")) {
-            // 未赋值则采用默认值
-            driverType = buildProperties.getDriver();
-        }
         return new TemplateBuilder(basePath, driverType, buildAll, templates());
     }
 
