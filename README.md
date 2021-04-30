@@ -42,9 +42,9 @@ acgs项目是“交互式编程”思想的具体实现.意在实现一种交互
 ```
 acgs:
   build:
-    basePath: org.acgs.cms.moudle
-    driver: mongo
-    buildAll: true
+    base-path: org.acgs.cms.moudle
+    driver-type: mongo
+    build-all: true
 ```
 
 3. 继承接口
