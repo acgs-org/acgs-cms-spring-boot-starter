@@ -21,6 +21,9 @@ public class AcgsCmsProperties {
 
     private Long tokenRefreshExpire = 2592000L;
 
+    public AcgsCmsProperties() {
+    }
+
     public String getTokenSecret() {
         return tokenSecret;
     }

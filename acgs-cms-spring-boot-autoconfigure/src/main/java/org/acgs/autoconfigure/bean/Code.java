@@ -14,6 +14,20 @@ public enum Code {
 
     DELETED(3, "Deleted", "删除成功"),
 
+    BUILDER_SUCCESS(800, "Builder Success", "自动构建成功"),
+
+    BUILDER_ERROR(801, "Builder Error", "自动构建错误"),
+
+    BUILDER_ENTITY_NOT_FOUND(810, "Entity Not Found", "实体数据不存在"),
+
+    BUILDER_PARAMETER_ERROR(811, "Entity Parameters Error", "实体参数列表错误"),
+
+    BUILDER_METHOD_ERROR(812, "Entity Methods Error", "实体方法列表错误"),
+
+    BUILDER_DRIVER_NOT_FOUND(813, "DriverType Not Found", "自动构造模式不匹配"),
+
+    BUILDER_ENTITY_ERROR(820, "Entity Error", "实体结构错误"),
+
     FAIL(10200, "Failed", "失败"),
 
     UN_AUTHORIZATION(10000, "Authorization Failed", "认证失败"),

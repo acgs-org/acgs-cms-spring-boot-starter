@@ -4,6 +4,8 @@ import org.acgs.autoconfigure.bean.Code;
 import org.acgs.autoconfigure.interfaces.BaseResponse;
 import org.springframework.http.HttpStatus;
 
+import java.io.Serial;
+
 /**
  * Http 相关异常类
  *
@@ -12,6 +14,7 @@ import org.springframework.http.HttpStatus;
  */
 public class HttpException extends RuntimeException implements BaseResponse {
 
+    @Serial
     private static final long serialVersionUID = 2359767895161832954L;
 
     protected int httpCode = HttpStatus.INTERNAL_SERVER_ERROR.value();

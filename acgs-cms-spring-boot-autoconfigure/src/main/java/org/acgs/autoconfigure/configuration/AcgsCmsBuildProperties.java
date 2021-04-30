@@ -9,18 +9,21 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties("acgs.cms.build")
 public class AcgsCmsBuildProperties {
 
-    private String path = "";
+    private String basePath = "module";
 
     private String driver = "mongo";
 
-    private boolean all = false;
+    private boolean buildAll = false;
 
-    public String getPath() {
-        return path;
+    public AcgsCmsBuildProperties() {
     }
 
-    public void setPath(String path) {
-        this.path = path;
+    public String getBasePath() {
+        return basePath;
+    }
+
+    public void setBasePath(String basePath) {
+        this.basePath = basePath;
     }
 
     public String getDriver() {
@@ -31,11 +34,11 @@ public class AcgsCmsBuildProperties {
         this.driver = driver;
     }
 
-    public boolean isAll() {
-        return all;
+    public boolean isBuildAll() {
+        return buildAll;
     }
 
-    public void setAll(boolean all) {
-        this.all = all;
+    public void setBuildAll(boolean buildAll) {
+        this.buildAll = buildAll;
     }
 }

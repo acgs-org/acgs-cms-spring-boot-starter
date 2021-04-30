@@ -19,6 +19,16 @@ public class Templates {
         this.templates = templates;
     }
 
+    /**
+     * 通过名称获取指定模版
+     *
+     * @param name 模版名称
+     * @return 模版字符串
+     */
+    public String getTemplate(String name) {
+        return templates.get(name);
+    }
+
     public Map<String, String> getTemplates() {
         return templates;
     }
