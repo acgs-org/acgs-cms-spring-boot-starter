@@ -31,9 +31,9 @@ acgs项目是“交互式编程”思想的具体实现.意在实现一种交互
 
 ```html
 <dependency>
-    <groupId>org.acgs</groupId>
+    <groupId>io.github.acgs-org</groupId>
     <artifactId>acgs-cms-spring-boot-starter</artifactId>
-    <version>0.1.0</version>
+    <version>0.3.0</version>
 </dependency>
 ```
 
