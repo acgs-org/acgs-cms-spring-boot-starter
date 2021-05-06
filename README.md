@@ -56,7 +56,7 @@ public class TestController extends BuilderController {}
 
 4. 测试
 
-```js
+```
 POST http://localhost:5000/acgs
 Content-Type: application/json
 
@@ -71,11 +71,9 @@ Content-Type: application/json
   },
   "methods": ["GET", "POST"]
 }
-
-###
 ```
 
-```js
+```
 POST http://localhost:5000/v1/sku/add
 Content-Type: application/json
 
