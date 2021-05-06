@@ -10,7 +10,7 @@
         <version>2.4.4</version>
     </parent>
 
-    <groupId>com.github.acgs-org</groupId>
+    <groupId>io.github.acgs-org</groupId>
     <artifactId>acgs-cms</artifactId>
     <version>0.1.0</version>
     <packaging>pom</packaging>
