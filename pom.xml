@@ -10,11 +10,11 @@
 
     <groupId>io.github.acgs-org</groupId>
     <artifactId>acgs-cms-spring-boot-starter</artifactId>
-    <version>0.2.0</version>
+    <version>0.2.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>acgs-cms</name>
-    <url>https://github.com/acgs-org/acgs-cms-core</url>
+    <url>https://github.com/acgs-org/acgs-cms-spring-boot-starter</url>
     <description>acgs CMS implemented by java</description>
 
     <properties>
@@ -92,18 +92,16 @@
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
-            <url>https://github.com/acgs-org/acgs-cms-core/blob/main/LICENSE</url>
+            <url>https://github.com/acgs-org/acgs-cms-spring-boot-starter/blob/main/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <url>https://github.com/acgs-org/acgs-cms-core/tags/acgs-cms-0.1.0</url>
-        <connection>scm:git:https://github.com/acgs-org/acgs-cms-core.git/tags/acgs-cms-0.1.0</connection>
-        <developerConnection>scm:git:https://github.com/acgs-org/acgs-cms-core.git/tags/acgs-cms-0.1.0
-        </developerConnection>
-      <tag>acgs-cms-spring-boot-starter-0.2.0</tag>
-  </scm>
+        <url>https://github.com/acgs-org/acgs-cms-spring-boot-starter</url>
+        <connection>scm:git:https://github.com/acgs-org/acgs-cms-spring-boot-starter.git</connection>
+        <developerConnection>scm:git:https://github.com/acgs-org/acgs-cms-spring-boot-starter.git</developerConnection>
+    </scm>
 
     <distributionManagement>
         <snapshotRepository>
@@ -138,8 +136,19 @@
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <useReleaseProfile>false</useReleaseProfile>
-                    <goals>deploy</goals>
+                    <providerImplementations>
+                        <git>jgit</git>
+                    </providerImplementations>
+                    <tagBase>${project.artifactId}-${project.version}</tagBase>
+                    <goals>-f pom.xml deploy</goals>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-jgit</artifactId>
+                        <version>1.11.2</version>
+                    </dependency>
+                </dependencies>
             </plugin>
 
             <plugin>
