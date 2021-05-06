@@ -10,67 +10,25 @@
 
     <groupId>io.github.acgs-org</groupId>
     <artifactId>acgs-cms-spring-boot-starter</artifactId>
-    <version>0.2.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <version>0.3.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <name>acgs-cms</name>
     <url>https://github.com/acgs-org/acgs-cms-spring-boot-starter</url>
     <description>acgs CMS implemented by java</description>
 
+    <modules>
+        <module>acgs-core</module>
+        <module>acgs-autoconfigure</module>
+    </modules>
+
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
-
-    <dependencies>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.auth0</groupId>
-            <artifactId>java-jwt</artifactId>
-            <version>3.8.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-core</artifactId>
-            <version>5.4.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.1</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-
-    </dependencies>
 
     <organization>
         <name>acgs-org</name>
@@ -116,7 +74,6 @@
 
     <build>
         <plugins>
-
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -140,7 +97,7 @@
                         <git>jgit</git>
                     </providerImplementations>
                     <tagBase>${project.artifactId}-${project.version}</tagBase>
-                    <goals>-f pom.xml deploy</goals>
+                    <goals>deploy</goals>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -193,7 +150,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 
