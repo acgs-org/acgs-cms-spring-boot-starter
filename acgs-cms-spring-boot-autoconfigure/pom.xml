@@ -5,7 +5,7 @@
     <parent>
         <artifactId>acgs-cms-spring-boot-starter</artifactId>
         <groupId>io.github.acgs-org</groupId>
-        <version>0.3.0</version>
+        <version>1.0.1</version>
     </parent>
 
     <artifactId>acgs-cms-spring-boot-autoconfigure</artifactId>
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>io.github.acgs-org</groupId>
             <artifactId>acgs-core</artifactId>
-            <version>0.3.0</version>
+            <version>1.0.1</version>
         </dependency>
 
         <dependency>

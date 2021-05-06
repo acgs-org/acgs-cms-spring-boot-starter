@@ -10,7 +10,7 @@
 
     <groupId>io.github.acgs-org</groupId>
     <artifactId>acgs-cms-spring-boot-starter</artifactId>
-    <version>0.3.0</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
 
     <name>acgs-cms</name>
@@ -72,14 +72,6 @@
             <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-
-    <dependencies>
-        <dependency>
-            <groupId>io.github.acgs-org</groupId>
-            <artifactId>acgs-cms-spring-boot-autoconfigure</artifactId>
-            <version>0.3.0</version>
-        </dependency>
-    </dependencies>
 
     <build>
         <plugins>
