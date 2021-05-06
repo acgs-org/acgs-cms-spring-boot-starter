@@ -4,7 +4,7 @@ import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
 import org.acgs.autoconfigure.exception.BuilderException;
 import org.acgs.autoconfigure.util.TemplateUtil;
-import org.acgs.core.util.BuilderUtil;
+import org.acgs.core.util.StringUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -66,11 +66,11 @@ public class TemplateBuilder {
     private void init(Entity entity) {
         entityMap = new HashMap<>();
         entityMap.put("name", entity.getName());
-        entityMap.put("upName", BuilderUtil.toUpper(entity.getName()));
+        entityMap.put("upName", StringUtil.toUpper(entity.getName()));
         entityMap.put("entityItem", TemplateUtil.getEntityItem(entity.getValues()));
         entityMap.put("methodItem", TemplateUtil.getMethodItem(entity.getMethods(), entityMap));
         entityMap.put("packagePath", basePath);
-        entityMap.put("filePath", COMMON_PATH + BuilderUtil.BaseToPath(basePath) + SEPARATOR
+        entityMap.put("filePath", COMMON_PATH + StringUtil.BaseToPath(basePath) + SEPARATOR
                 + entityMap.get("name") + SEPARATOR + entityMap.get("upName"));
     }
 

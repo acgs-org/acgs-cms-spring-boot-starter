@@ -9,7 +9,7 @@ import org.acgs.core.constant.BuilderConstant;
  * @author John@acgs-org
  * create time 2021/4/27
  */
-public class BuilderUtil {
+public class StringUtil {
 
     /**
      * 字符串首字母大写
