@@ -93,19 +93,8 @@
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <useReleaseProfile>false</useReleaseProfile>
-                    <providerImplementations>
-                        <git>jgit</git>
-                    </providerImplementations>
-                    <tagBase>${project.artifactId}-${project.version}</tagBase>
                     <goals>deploy</goals>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.scm</groupId>
-                        <artifactId>maven-scm-provider-jgit</artifactId>
-                        <version>1.11.2</version>
-                    </dependency>
-                </dependencies>
             </plugin>
 
             <plugin>
