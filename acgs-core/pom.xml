@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.acgs</groupId>
+        <groupId>com.github.acgs-org</groupId>
         <artifactId>acgs-cms</artifactId>
         <version>0.1.0</version>
     </parent>
