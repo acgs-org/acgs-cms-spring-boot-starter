@@ -5,7 +5,7 @@
     <parent>
         <artifactId>acgs-cms-spring-boot-starter</artifactId>
         <groupId>io.github.acgs-org</groupId>
-        <version>1.0.1</version>
+        <version>1.0.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>acgs-core</artifactId>
