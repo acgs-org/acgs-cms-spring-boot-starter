@@ -89,7 +89,7 @@ Content-Type: application/json
 
 #### acgs 后端项目
 
-- [基于 SpringBoot 的后端项目](https://github.com/acgs-org/acgs-cms-spring-boot)
+- [基于 SpringBoot 的后端项目](https://github.com/acgs-org/acgs-cms-spring-cloud)
 
 #### acgs 前端项目
 
